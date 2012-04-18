@@ -68,3 +68,8 @@ nmap <S-Tab> gT
 " if you install this somewhere other than ~/.vim, you'll need to change the
 " last argument
 autocmd! bufwritepost vimrc source ~/.vim/vimrc
+
+" Map ctrl-j and ctrl-k to go to the next file down and up respectively when
+" editing in split mode.
+map <C-J> <C-W>j<C-W>_
+map <C-K> <C-W>k<C-W>_
