@@ -1,3 +1,4 @@
+" test
 " Startup Pathogen
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
@@ -23,8 +24,8 @@ syntax sync fromstart
 
 let g:solarized_termcolors=256
 
-set background=light
-colorscheme solarized
+"set background=light
+"colorscheme solarized
 
 set cpoptions=aABceFsmq
 "             |||||||||
@@ -46,6 +47,7 @@ set cpoptions=aABceFsmq
 
 set backspace=indent,eol,start " make backspace a more flexible
 set backup " make backup files 
+set backupdir=~/.vim/tmp " directory to place backup files
 set directory=~/.vim/tmp " directory to place swap files in
 set fileformats=unix,dos,mac " support all three, in this order
 set iskeyword+=_,$,@,%,# " none of these are word dividers 
