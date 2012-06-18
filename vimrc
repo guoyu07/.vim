@@ -11,7 +11,7 @@ set pastetoggle=<F5>
 
 set tabstop=4
 set shiftwidth=4
-set expandtab
+set noexpandtab
 
 set nocompatible " explicitly get out of vi-compatible mode
 
