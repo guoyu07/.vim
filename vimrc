@@ -75,3 +75,12 @@ autocmd! bufwritepost vimrc source ~/.vim/vimrc
 " editing in split mode.
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
+map <C-H> <C-W>h
+map <C-L> <C-W>l
+
+:let NERDTreeQuitOnOpen = 0
+nnoremap <Leader>d :let NERDTreeQuitOnOpen = 0<bar>NERDTreeToggle<CR>
+nnoremap <Leader>D :let NERDTreeQuitOnOpen = 1<bar>NERDTreeToggle<CR>
+
+nnoremap <C-O> :tabnew<bar> :let NERDTreeQuitOnOpen = 1<bar>NERDTree<CR>
+nnoremap <C-N> :tabnew 
