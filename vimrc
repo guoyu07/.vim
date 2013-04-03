@@ -17,7 +17,6 @@ set nocompatible " explicitly get out of vi-compatible mode
 
 set noexrc " don't use local version of .(g)vimrc, .exrc
 
-
 syntax enable
 syntax on
 syntax sync fromstart
@@ -44,17 +43,15 @@ set cpoptions=aABceFsmq
 "             |+-- :write updates alternative file name
 "             +-- :read updates alternative file name
 
-
 set backspace=indent,eol,start " make backspace a more flexible
 set backup " make backup files 
-set backupdir=~/.vim/tmp " directory to place backup files
+set backupdir=~/.vim/tmp
 set directory=~/.vim/tmp " directory to place swap files in
 set fileformats=unix,dos,mac " support all three, in this order
 set iskeyword+=_,$,@,%,# " none of these are word dividers 
 set mouse=a " use mouse everywhere
 set noerrorbells " don't make noise
 
-set cursorline " highlight current line
 set incsearch " BUT do highlight as you type you 
 set laststatus=2 " always show the status line
 set linespace=0 " insert extra pixel lines 
@@ -65,6 +62,14 @@ set number " turn on line numbers
 " Set tab and shift-tab for moving between tabs
 nmap <Tab> gt
 nmap <S-Tab> gT
+
+" use two spaces for ruby files
+autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 expandtab
+" make requires real tabs
+autocmd FileType make setlocal noexpandtab shiftwidth=8
+" WordPress likes real tabs, so let's assume all php is that way
+autocmd FileType php setlocal noexpandtab shiftwidth=4
+
 
 " When vimrc is edited, reload it
 " if you install this somewhere other than ~/.vim, you'll need to change the
