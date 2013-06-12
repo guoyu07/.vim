@@ -1,5 +1,5 @@
 #!/bin/bash
-for x in /home/blochs/.vim/tmp/*; do
+for x in $HOME/.vim/tmp/*; do
     if [ `echo $x | grep -P '~$'` ]; then
         if [ `date +%d` -ne `date -r $x +%d` ]; then
             rm $x;
